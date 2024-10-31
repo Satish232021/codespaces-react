@@ -16,8 +16,9 @@ body {
 }
 
 .content {
-  position: absolute;
+  position: relative;
   top: 60px;
+  left: 0;
 }
 
 nav {
@@ -551,22 +552,21 @@ nav a {
   /* color: #ff4500;  */
   transform: scale(1.2);   
 }
-/* @media (min-width: 800px) and (max-width: 1400px) {
+@media (min-width: 800px) and (max-width: 1000px) {
   .home {
     flex-direction: column;
-    padding: 2rem 1rem;
   }
 
   nav {
-    height: 100px;
+    height: 60px;
     margin-bottom: 50px;
   }
 
   .nav-left a h2{
-    font-size: 50px;
+    font-size: 25px;
   }
   .nav-right a {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .home-left,
@@ -579,35 +579,36 @@ nav a {
   }
 
   .home-left h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
-
-  .home-left h2,
+  
   .home-left p {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    height: 100%;
+    width: 100%;
   }
 
   .hire-btn,
   .talk-btn {
-    height: 80px;
-    width: 250px;
+    height: 60px;
+    width: 200px;
     font-weight: 700;
   }
 
   .about-container{
-    height: 500px;
+    height: auto;
   }
 
   .about h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .about p {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
   .skills {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   .skill-container {
@@ -616,7 +617,7 @@ nav a {
   }
 
   .skill-container h3 {
-    font-size: 50px;
+    font-size: 25px;
   }
 
   .skill {
@@ -627,7 +628,7 @@ nav a {
   }
 
   .skill li {
-    font-size: 50px;
+    font-size: 25px;
   }
 
   .portfolio-grid {
@@ -650,7 +651,7 @@ nav a {
   }
 
   .contact-form {
-    height: 30%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -659,7 +660,7 @@ nav a {
   }
 
   .contact-form input {
-    height: 60px;
+    height: 50px;
   }
   .contact-form input::placeholder{
     font-size: 25px;
@@ -669,11 +670,15 @@ nav a {
     font-size: 25px;
   }
 
+  #contact h2{
+    font-size: 30px;
+  }
+
   .contact-form button {
-    height: 60px;
+    height: 50px;
     width: auto;
     border: 2px solid black;
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .footer {
@@ -681,14 +686,14 @@ nav a {
   }
 
   .footer a {
-    height: 90px;
-    width: 90px;
-    font-size: 50px;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 480px) and (max-width: 799px) {
-  nav {
+  /* nav {
     flex-direction: column;
     align-items: center;
     height: auto;
@@ -697,20 +702,32 @@ nav a {
   .nav-right a {
     font-size: 24px;
     margin: 0 0 1rem;
-  }
+  } */
+
+
 
   .home {
     flex-direction: column;
     padding: 1rem;
   }
 
+  .home-left,
+  .home-right{
+    width: 100%;
+  }
+
+  .home-right img{
+    object-fit: cover;
+    object-position: top;
+  }
+
   .home-left h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .home-left h2,
   .home-left p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .hire-btn,
@@ -719,105 +736,12 @@ nav a {
     width: 200px;
     font-size: 18px;
     font-weight: 700;
+    margin-top: 5;
   }
 
-  .about-container {
-    height: auto;
-  }
-
-  .about h2 {
-    font-size: 2.5rem;
-  }
-
-  .about p {
-    font-size: 1.2rem;
-  }
-
-  .skills {
-    margin-top: 50px;
+  .about {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .skill-container h3 {
-    font-size: 40px;
-  }
-
-  .skill li {
-    font-size: 40px;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    height: auto;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .contact-form {
-    width: 90%;
-    font-size: 18px;
-  }
-
-  .contact-form input {
-    height: 50px;
-  }
-
-  .contact-form input::placeholder,
-  .textArea::placeholder {
-    font-size: 18px;
-  }
-
-  .contact-form button {
-    height: 50px;
-    font-size: 20px;
-  }
-
-  .footer {
-    margin-top: 20px;
-  }
-
-  .footer a {
-    height: 70px;
-    width: 70px;
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 800px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .nav-right a {
-    font-size: 24px;
-    margin: 0 0 1rem;
-  }
-
-  .home {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .home-left h1 {
-    font-size: 2.5rem;
-  }
-
-  .home-left h2,
-  .home-left p {
-    font-size: 1.2rem;
-  }
-
-  .hire-btn,
-  .talk-btn {
-    height: 60px;
-    width: 180px;
-    font-size: 18px;
-    font-weight: 700;
+    justify-content: space-around;
   }
 
   .about-container {
@@ -825,7 +749,7 @@ nav a {
   }
 
   .about h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .about p {
@@ -836,27 +760,39 @@ nav a {
     margin-top: 20px;
     display: flex;
     align-items: center;
+    flex-direction: row;
+  }
+
+  .skill-container{
+    height: 95%;
+
+  }
+
+  .skill {
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
   }
 
   .skill-container h3 {
-    font-size: 32px;
+    font-size: 20px;
   }
 
   .skill li {
-    font-size: 32px;
+    font-size: 17px;
   }
 
   .portfolio-grid {
-    grid-template-columns: 1fr;
-    height: auto;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
   }
 
   .contact-form {
-    width: 90%;
+    width: 100%;
     font-size: 18px;
   }
 
@@ -883,141 +819,4 @@ nav a {
     width: 50px;
     font-size: 30px;
   }
-} */
-
-/* For small screens: 480px and below */
-@media (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-right a {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-
-  .about-container, .skills, .contact-form {
-    height: auto;
-    font-size: 0.8rem;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    height: auto;
-    text-align: center;
-  }
-
-  .footer a {
-    height: 40px;
-    width: 40px;
-    font-size: 20px;
-  }
 }
-
-/* For medium-small screens: 480px to 799px */
-@media (min-width: 480px) and (max-width: 799px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-left h1 {
-    font-size: 2rem;
-  }
-
-  .about h2 {
-    font-size: 1.5rem;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    width: 90%;
-    height: auto;
-    gap: 20px;
-  }
-
-  .contact-form {
-    width: 95%;
-    font-size: 1.2rem;
-  }
-
-  .footer a {
-    height: 60px;
-    width: 60px;
-    font-size: 25px;
-  }
-}
-
-/* For larger tablet and small laptop screens: 800px to 1199px */
-@media (min-width: 800px) and (max-width: 1199px) {
-  nav {
-    height: 100px;
-    margin-bottom: 50px;
-  }
-
-  .nav-left a h2 {
-    font-size: 45px;
-  }
-
-  .nav-right a {
-    font-size: 25px;
-  }
-
-  .home {
-    flex-direction: column;
-    padding: 2rem;
-  }
-
-  .home-left h1 {
-    font-size: 3.5rem;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr 1fr;
-    width: 90%;
-  }
-
-  .contact-form {
-    width: 80%;
-    font-size: 1.5rem;
-  }
-
-  .footer a {
-    height: 70px;
-    width: 70px;
-  }
-}
-
-/* For laptops and desktops: 1200px to 1400px */
-@media (min-width: 1200px) and (max-width: 1400px) {
-  .nav-left a h2 {
-    font-size: 50px;
-  }
-
-  .nav-right a {
-    font-size: 30px;
-  }
-
-  .home-left h1 {
-    font-size: 4rem;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .contact-form {
-    width: 80%;
-    font-size: 1.8rem;
-  }
-
-  .footer a {
-    height: 80px;
-    width: 80px;
-    font-size: 40px;
-  }
-}
-
-
-

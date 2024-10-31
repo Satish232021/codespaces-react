@@ -72,20 +72,22 @@ const portfolio = [
 
 const App = () => (
   <div>
-    <Navbar navItems={navItems} />
+    <div>
+      <Navbar navItems={navItems} />
+    </div>
     <div className='content'>
-    <section id="home">
-      <Home  home={home}/>
-    </section>
-    <section id="about">
-      <About about={about} />
-    </section>
-    <section id="portfolio">
-      <Portfolio portfolio={portfolio} />
-    </section>
-    <section id="contact">
-      <Contact />
-    </section> 
+      <section id="home">
+        <Home  home={home}/>
+      </section>
+      <section id="about">
+        <About about={about} />
+      </section>
+      <section id="portfolio">
+        <Portfolio portfolio={portfolio} />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section> 
     </div>
 
   </div>
