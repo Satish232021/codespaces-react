@@ -1,0 +1,155 @@
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+  
+  .portfolio-item {
+    background: #f1f1f1;
+    padding: 0.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    cursor: pointer;
+  
+  }
+  
+  .portfolio-item a{
+    display: block;
+    height: 100%;
+    width: 100%;
+  
+  }
+  
+  .portfolio-item:hover{
+    transform: scale(1.1);
+  }
+  
+  .portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.515); 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .portfolio-item:hover::before {
+    opacity: 1; 
+  }
+  
+  .portfolio-item.Caffiend::after{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+  
+  }
+  .portfolio-item.Caffiend:hover::after{
+    content: 'Caffiend';
+    font-size: 40px;
+    opacity: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .portfolio-item.Rock-Paper-Scissor::after{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 0px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  
+  }
+  .portfolio-item.Rock-Paper-Scissor:hover::after{
+    content: 'Rock Paper Scissor';
+    font-size: 40px;
+    opacity: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .portfolio-item.Youtube-clone::after{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 0px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  
+  }
+  .portfolio-item.Youtube-clone:hover::after{
+    content: 'Youtube-clone';
+    font-size: 40px;
+    opacity: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .portfolio-item.Amazon-Ecommerce::after{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 0px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  
+  }
+  .portfolio-item.Amazon-Ecommerce:hover::after{
+    content: 'Amazon-Ecommerce';
+    font-size: 40px;
+    opacity: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .portfolio-item.Keeper-Application::after{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 0px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  
+  }
+  .portfolio-item.Keeper-Application:hover::after{
+    content: 'Keeper-Application';
+    font-size: 40px;
+    opacity: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  
+  .portfolio-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position:center ;
+  }
+  
+  .portfolio {
+    background-image: url('../assets/images/project.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
